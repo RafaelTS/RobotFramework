@@ -47,3 +47,5 @@ Cadastrar um novo livro
     ${RESPOSTA}   Post Request    fakeAPI    Books
     ...                           data={"ID":2130,"Title":"A volta dos que não foram","Description": "Livro","PageCount": 2400,"Excerpt": "True","PublishDate": "2019-06-11T01:16:57.510Z"}
     ...                           headers=${HEADERS}
+
+Conferir se retorna todos os dados cadastrados para o novo livro

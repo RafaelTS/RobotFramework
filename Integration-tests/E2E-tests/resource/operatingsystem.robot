@@ -1,5 +1,5 @@
 *** Settings ***
-Library    OperatingSystem
+Library    S
 
 *** Variable ***
 ${PATH}   F:\Programação\Robot\

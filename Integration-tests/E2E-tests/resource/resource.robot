@@ -1,5 +1,5 @@
 *** Settings ***
-Lybrary    OperationSystem
+Library    SeleniumLibrary
 
 *** Variable ***
 ${BROWSER}    firefox
@@ -8,8 +8,7 @@ ${URL}        http://automationpractice.com/index.php
 *** Keywords ***
 Abrir navegador
   Open Browser    http://automationpractice.com/index.php   ${BROWSER}
-  Apend
-
+  
 Fechar navegador
   Close Browser
 
@@ -22,6 +21,7 @@ Digitar o nome do produto "${PRODUTO}" no campo da pesquisa
 
 Clicar no botão Pesquisar
   Click Element    name=submit_search
+  
 
 Conferir se o produto "${PRODUTO}" foi listado no site
   Wait Until Element Is Visible     css=#center_column > h1
@@ -32,3 +32,5 @@ Conferir se o produto "${PRODUTO}" foi listado no site
 Conferir a mensagem de erro "No result were found in your search "${MENSAGEM_DE_ALERTA}""
   Wait Until Element Is Visible    xpath=//*[@id="center_column"]/p[@class=alert alert-warning]
   Element Text Should Be    xpath=//*[@id="center_column"]/p[@class=alert alert-warning]    ${MENSAGEM_DE_ALERTA}
+
+  

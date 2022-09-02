@@ -1,7 +1,10 @@
 *** Settings ***
-resource          ../resource/resource.robot
-Test Setup        Abrir navegador
-Test Teardown     Fechar navegador
+Library             SeleniumLibrary     
+Resource            ../resource/resource.robot
+Resource            ../pages/title_and_search_pages.robot
+Test Setup          Abrir navegador
+Test Teardown       Fechar navegador
+
 
 *** Test Case ***
 # Set Test Documentation    To execute one simples tests, it's necessary to write all the path and put the "t" argument

@@ -1,7 +1,10 @@
 *** Settings ***
-resource          ../resource/resource.robot
-Test Setup        Abrir navegador
-Test Teardown     Fechar navegador
+Library             SeleniumLibrary     
+Resource            ../resource/resource.robot
+Resource            ../pages/balance_page.robot
+Test Setup          Abrir navegador
+Test Teardown       Fechar navegador
+
 
 #
 # *** Test Case ***
